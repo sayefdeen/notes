@@ -35,3 +35,4 @@ npm run lint
 ```
 
 - Note: You can't leave the message/note empty, and for now you can only use add/a
+  ![UML](./img/UML.png 'UML Diagram')
