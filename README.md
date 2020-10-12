@@ -13,6 +13,14 @@ installing libraries
 ```cmd
 npm i minimist uuid --save
 npm i -D eslint --save
+npm i -D jset
+npm i @types/jest
+```
+
+run all tests
+
+```cmd
+npm test
 ```
 
 You can add a new note for using cmd
