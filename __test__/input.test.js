@@ -54,7 +54,6 @@ describe('Input', () => {
   describe('Validation', () => {
     it('return true when proper object is given', () => {
       const input = new Input();
-      console.log(input);
       expect(input.valid()).toBeTruthy();
     });
   });

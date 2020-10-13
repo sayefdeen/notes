@@ -5,16 +5,15 @@ const Notes = require('./lib/notes');
 
 const createdObj = new Input();
 const notesObject = new Notes();
-createdObj.valid() ? notesObject.execute(createdObj) : errorMessage(createdObj);
 
-function errorMessage(obj) {
-  console.log(`
-        Entered action was ${obj.action}
-        Entered message should be a string only and not empty
-        Ideal calling is like this :
-        --add "Enter you message here" 
-    `);
+if (/a|add|delete|list/.test(createdObj.action)) {
+  notesObject.execute(createdObj);
+} else {
+  notesObject.errorMessage(createdObj);
 }
 
 // I have worked on this exapmle
 // --add "This is a really cool thing that I wanted to remember for later"
+// --add "this is fun" --category school
+// --list
+// --delete <id for the note>
