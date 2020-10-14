@@ -31,6 +31,16 @@ describe('Notes Model', () => {
     const allData = await notesObj.callAll();
     expect(allData.length).toEqual(1);
   });
+  it('get array if the category was saved in DB', async () => {
+    const testObj = { action: 'list', payload: 'school' };
+    const all = await notesObj.callCategory(testObj);
+    expect(all.length).toEqual(2);
+  });
+  it('get Empty array if the category was not saved in DB', async () => {
+    const testObj = { action: 'list', payload: 'wow' };
+    const all = await notesObj.callCategory(testObj);
+    expect(all).toEqual([]);
+  });
   it('the document will be deleted if the id was passed correctly', async () => {
     const savedNote = await notesObj.save(sendObject);
     const deletedData = await notesObj.deleteItem(savedNote);
