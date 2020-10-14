@@ -11,12 +11,13 @@ npm init -y
 installing libraries
 
 ```cmd
-npm i minimist uuid --save
-npm i -D eslint --save
+npm i minimist uuid
+npm i -D eslint
 npm i -D jset
 npm i @types/jest
 npm i mongoose
 npm i dotenv
+npm i @code-fellows/supergoose
 ```
 
 run all tests
@@ -44,18 +45,22 @@ You can Delete a record from DB
 --delete <Id for the record from --list>
 ```
 
-OutPut of this command is
-
-```cmd
-Adding Note: this is another message
-```
-
 You can eslint your code using this command
 
 ```cmd
 npm run lint
 ```
 
-- Note: You can't leave the message/note empty, and for now you can use --add/-a --list and --delete
+<p style="color:red; font-size: 18px">Notes</p>
+
+- You can't leave the message/note empty, and for now you can use --add/-a --list and --delete
+
+- You Have to pass a valid action
+
+- You can't keep the category empty
+
+- if the DB is Empty --list will return nothing
+
+- you have to pass a valid id when trying to delete
 
 ![UML](./img/UML.png 'UML Diagram')

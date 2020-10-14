@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage --verbose",
+    "test-watch": "jest --verbose --coverage --watchAll",
     "start": "node index.js",
     "lint": "eslint index.js lib/ __test__/ "
   },
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/sayefdeen/notes#readme",
   "dependencies": {
+    "@code-fellows/supergoose": "^1.0.11",
     "@types/jest": "^26.0.14",
     "dotenv": "^8.2.0",
     "minimist": "^1.2.5",
