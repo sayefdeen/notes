@@ -1,7 +1,14 @@
 'use strict';
 
 const Input = require('./lib/input');
+const mongoose = require('mongoose');
 const Notes = require('./lib/notes');
+const MONGODB_URI = process.env.MONGODB_URI;
+
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const createdObj = new Input();
 const notesObject = new Notes();
